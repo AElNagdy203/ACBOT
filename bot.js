@@ -12,13 +12,11 @@ client.on('ready', () => {
 
  
 
-	if (command === 'ping') {
-	 	message.channel.send('Pong.');
-	} else if (command === 'ياض') {
-	 	message.channel.send('هلا.');
-	} else if (command === 'ض') {
-	 	message.channel.send('ممنوع ض'.);
- }
+if (command === 'ping') {
+   message.channel.send('Pong.');
+} else if (command === 'police') {
+   message.channel.send('what.');
+}
 	
 });
 
