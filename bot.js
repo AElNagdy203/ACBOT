@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'police') {
+    if (message.content === 'po') {
 
-       message.reply('what-');
+       message.reply('what');
 
        }
 
