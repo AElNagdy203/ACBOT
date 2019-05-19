@@ -18,7 +18,9 @@ client.on('message', message => {
 
        message.reply('Staff Of Faction');
 
-       }
+       } else if (command === 'Loay2') {
+         message.channel.send('shit qqq'.);
+ }
 
 });
 
