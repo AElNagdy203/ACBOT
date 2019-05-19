@@ -18,9 +18,13 @@ client.on('message', message => {
 
        message.reply('في الحقيقة أنا أحبه أبتعد عنه، شكراً لك');
 
-       }
-
+       } else if (message.content === 'Loay') {
+       message.reply('ياض هذا بعد احبه');
 });
+
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
