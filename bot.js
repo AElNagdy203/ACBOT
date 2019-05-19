@@ -16,7 +16,7 @@ client.on('message', message => {
 
     if (message.content === 'Loay1') {
 
-       message.reply('Staff Of Faction LSPD');
+       message.reply('Loay is staff of faction LSPD, Nice');
 
        }
 
