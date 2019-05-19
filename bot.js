@@ -29,10 +29,10 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	if (message.content === '!fruits') {
-		message.react('🍊')
-			.then(() => message.react('🍊'))
-			.then(() => message.react('🍇'))
+	if (message.content === '!شاي') {
+		message.react('☕')
+			.then(() => message.react('☕'))
+			.then(() => message.react('☕'))
 			.catch(() => console.error('One of the emojis failed to react.'));
 	}
 });
