@@ -12,14 +12,14 @@ client.on('ready', () => {
 
  
 
-client.on('message', message => {
-
-    if (message.content === 'ping') {
-
-       message.reply('pong');
-
-       }
-
+	if (command === 'ping') {
+	 	message.channel.send('Pong.');
+	} else if (command === 'ياض') {
+	 	message.channel.send('هلا.');
+	} else if (command === 'ض') {
+	 	message.channel.send('ممنوع ض'.);
+ }
+	
 });
 
 
