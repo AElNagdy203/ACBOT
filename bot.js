@@ -20,6 +20,8 @@ client.on('message', message => {
 
        } else if (message.content === 'Loay') {
        message.reply('ياض هذا بعد احبه');
+       }
+
 });
 
 
