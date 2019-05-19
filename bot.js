@@ -12,7 +12,7 @@ client.on('ready', () => {
 client.on('message', message => {
 if (command === 'ping') {
    message.channel.send('Pong.');
-} else if (command === 'ضض') {
+} else if (command === 'police') {
    message.channel.send('what.');
 }
 
