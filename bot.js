@@ -20,7 +20,9 @@ client.on('message', message => {
 
        } else if (message.content === 'Loay') {
        message.reply('ياض هذا بعد احبه');
-   }
+   } else if (message.content === 'ACIMAN') {
+       message.reply('من فضلكم الكل يحيه لأنه يتعب عشان يخليني بوت حلو :heart:');
+  }
 
 });
 
