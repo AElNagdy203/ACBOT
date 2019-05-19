@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'Loay1') {
+    if (message.content === 'iLawX') {
 
-       message.reply('Loay is staff of faction LSPD, Nice');
+       message.reply('في الحقيقة أنا أحبه أبتعد عنه، شكراً لك');
 
        }
 
