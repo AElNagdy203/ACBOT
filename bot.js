@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'po') {
+    if (message.content === 'لؤي') {
 
-       message.reply('what');
+       message.reply('هذا صاحب فاكشن، تبى شئ آخر؟');
 
        }
 
