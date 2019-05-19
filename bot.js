@@ -37,6 +37,17 @@ client.on('message', message => {
 	}
 });
 
+client.on('message', message => {
+
+    if (message.content === 'أعملي شاي') {
+
+       message.reply('تفضل يا عومري :heart:');
+  }
+
+});
+
+
+
 
 
 
