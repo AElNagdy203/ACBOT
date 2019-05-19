@@ -9,17 +9,14 @@ client.on('ready', () => {
     console.log('I am ready!');
 
 });
-
- 
-
+client.on('message', message => {
 if (command === 'ping') {
    message.channel.send('Pong.');
-} else if (command === 'police') {
+} else if (command === 'ضض') {
    message.channel.send('what.');
 }
-	
-});
 
+});
 
 
 
