@@ -29,7 +29,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	if (message.content === '!شاي') {
+	if (message.content === 'أعملي شاي') {
 		message.react('☕')
 			.then(() => message.react('☕'))
 			.then(() => message.react('☕'))
