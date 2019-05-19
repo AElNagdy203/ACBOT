@@ -53,27 +53,6 @@ client.on('message', message => {
 
 
 
-    const client = this.client;
-    const channel = this.getChannel(data);
-    let message;
-    if (channel) {
-      message = this.getMessage(data, channel);
-      if (message) {
-        channel.messages.delete(message.id);
-        message.deleted = true;
-        /**
-         * Emitted whenever a message is deleted.
-         * @event Client#messageDelete
-         * @param {Message} message The deleted message
-         */
-        client.emit(Events.MESSAGE_DELETE, message);
-      }
-    }
-
-    return { message };
-  }
-}
-
 
 
 
