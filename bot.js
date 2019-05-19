@@ -42,9 +42,14 @@ client.on('message', message => {
     if (message.content === 'أعملي شاي') {
 
        message.reply('تفضل يا عومري :heart:');
-  }
+  } else if (message.content === 'بوت غبي') {
+       message.reply('😡 وش سويت لك');
+ }
 
 });
+
+
+
 
 
 
