@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'لؤي') {
+    if (message.content === 'Loay') {
 
-       message.reply('هذا صاحب فاكشن، تبى شئ آخر؟');
+       message.reply('Staff Of Faction');
 
        }
 
