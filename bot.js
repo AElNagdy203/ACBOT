@@ -44,7 +44,9 @@ client.on('message', message => {
        message.reply('تفضل يا عومري :heart:');
   } else if (message.content === 'بوت غبي') {
        message.reply('😡 وش سويت لك');
- }
+ } else if (message.content === 'بوت تحبني؟') {
+       message.reply('😡 لا');
+}
 
 });
 
