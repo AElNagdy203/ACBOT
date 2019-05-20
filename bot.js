@@ -68,12 +68,12 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content.startsWith("!push2")) {
     var embedWarn = new Discord.RichEmbed()
-    .setTitle("► The punishments due", "eee")
-    .setDescription("• Warn 2 \n • Warn 3 \n • Warn 4 = Suspended)
+    .setTitle("► The punishments due")
   .setColor('F0EFEF')
   .addField("• Warn 1", "www")
   .addField("• Warn 2", "sss")
   .addField("• Warn 3", "ss")
+  .addField('• Warn 6 = Ban permanently', 'afs')
   .addField("• Warn 6 = Ban permanently", "asfa")
     message.channel.sendEmbed(embedWarn)
     }
