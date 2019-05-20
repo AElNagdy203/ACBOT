@@ -48,7 +48,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 
-    if (message.content === '!push') {
+    if (message.content === 'kkaadddassdwwmmmee') {
 
        message.channel.send('**► The punishments due**')
 			.then(() => message.channel.send('• Warn 1'))
@@ -70,11 +70,11 @@ client.on('message', message => {
     var embedWarn = new Discord.RichEmbed()
     .setTitle("► The punishments due")
   .setColor('F0EFEF')
-  .addField("• Warn 1", "ــــــــــــــــــــــــــــــــــــــــــــ")
-  .addField("• Warn 2", "ــــــــــــــــــــــــــــــــــــــــــــ")
-  .addField("• Warn 3", "ــــــــــــــــــــــــــــــــــــــــــــ")
-  .addField('• Warn 4 = Suspended', "ــــــــــــــــــــــــــــــــــــــــــــ")
-  .addField("• Warn 6 = Ban permanently", "ACBOT was developed by ACIMAN#1411")
+  .addField("• Warn 1", "ـــــــــــــــــــــــــــــــــــــــ")
+  .addField("• Warn 2", "ـــــــــــــــــــــــــــــــــــــــ")
+  .addField("• Warn 3", "ـــــــــــــــــــــــــــــــــــــــ")
+  .addField('• Warn 4 = Suspended', "ـــــــــــــــــــــــــــــــــــــــ")
+  .addField("• Warn 6 = Ban permanently", "► ACBOT was developed by ACIMAN#1411")
     message.channel.sendEmbed(embedWarn)
     }
 });
