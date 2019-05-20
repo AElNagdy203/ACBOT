@@ -67,7 +67,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content.startsWith("!push2")) {
-const embed = new Discord.RichEmbed()
+    var embedWarn = new Discord.RichEmbed()
   .setTitle("This is your title, it can hold 256 characters")
   .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
   .setColor(0x00AE86)
