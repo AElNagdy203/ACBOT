@@ -51,6 +51,21 @@ client.on('message', message => {
 });
 
 
+client.on('message', message => {
+
+    if (message.content === 'push') {
+
+       message.reply('**► The punishments due**')
+			.then(() => message.reply('• Warn 1'))
+			.then(() => message.reply('• Warn 2'))
+			.then(() => message.reply('• Warn 3'))
+			.then(() => message.reply('• Warn 4 = Suspended'))
+			.then(() => message.reply('• Warn 6 = Ban permanently'))
+			.catch(() => console.error('One of the massages failed to reply.'));
+	}
+});
+
+
 
 
 
