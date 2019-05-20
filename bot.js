@@ -55,12 +55,12 @@ client.on('message', message => {
 
     if (message.content === 'push') {
 
-       message.send('**► The punishments due**')
-			.then(() => message.send('• Warn 1'))
-			.then(() => message.send('• Warn 2'))
-			.then(() => message.send('• Warn 3'))
-			.then(() => message.send('• Warn 4 = Suspended'))
-			.then(() => message.send('• Warn 6 = Ban permanently'))
+       message.channel.send('**► The punishments due**')
+			.then(() => message.channel.send('• Warn 1'))
+			.then(() => message.channel.send('• Warn 2'))
+			.then(() => message.channel.send('• Warn 3'))
+			.then(() => message.channel.send('• Warn 4 = Suspended'))
+			.then(() => message.channel.send('• Warn 6 = Ban permanently'))
 			.catch(() => console.error('One of the massages failed to reply.'));
 	}
 });
