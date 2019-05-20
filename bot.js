@@ -67,14 +67,6 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
-    if (message.content === '!push2') {
-new embedwarn = new Discord.RichEmbed()
-.addField("text")
-.setTitle("text")
-.setAuthor("test")
-
-
 
 
 
