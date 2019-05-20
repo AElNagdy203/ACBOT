@@ -15,8 +15,8 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if (message.content === 'ACIMAN') {
-
-       message.reply('من فضلكم الكل يحيه لأنه يتعب عشان يخليني بوت حلو :heart:);
+	    
+       message.reply('من فضلكم الكل يحيه لأنه يتعب عشان يخليني بوت حلو :heart:');
   }
 
 });
