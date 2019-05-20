@@ -68,8 +68,8 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content.startsWith("!push2")) {
     var embedWarn = new Discord.RichEmbed()
-    .setColor('30x00AE86')
     .setTitle("► The punishments due", "eee")
+  .setColor('30x00AE86')
   .addField("• Warn 1", "www")
   .addField("• Warn 2", "sss")
   .addField("• Warn 3", "ss")
