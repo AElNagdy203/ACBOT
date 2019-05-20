@@ -70,11 +70,11 @@ client.on('message', message => {
     var embedWarn = new Discord.RichEmbed()
     .setTitle("► The punishments due")
   .setColor('F0EFEF')
-  .addField("• Warn 1", "www")
-  .addField("• Warn 2", "sss")
-  .addField("• Warn 3", "ss")
-  .addField('• Warn 6 = Ban permanently', 'afs')
-  .addField("• Warn 6 = Ban permanently", "asfa")
+  .addField("• Warn 1", "")
+  .addField("• Warn 2", "")
+  .addField("• Warn 3", "")
+  .addField('• Warn 4 = Suspended', "")
+  .addField("• Warn 6 = Ban permanently", "")
     message.channel.sendEmbed(embedWarn)
     }
 });
