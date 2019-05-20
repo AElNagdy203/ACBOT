@@ -69,11 +69,10 @@ client.on('message', message => {
     if (message.content.startsWith("!push2")) {
     var embedWarn = new Discord.RichEmbed()
     .setTitle("► The punishments due", " ")
-    .addField("• Warn 1", " ")
-    .addField("• Warn 2", " ")
-    .addField("• Warn 3", " ")
-    .addField("• Warn 4 = Suspended", " ")
-    .addField("• Warn 6 = Ban permanently", " ")
+  .addField("• Warn 1", " ")
+  .addField("• Warn 2", " ")
+  .addField("• Warn 3", " ")
+  .addField("• Warn 6 = Ban permanently", " "
     message.channel.sendEmbed(embedWarn)
     }
 });
