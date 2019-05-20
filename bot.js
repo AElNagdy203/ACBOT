@@ -65,7 +65,14 @@ client.on('message', message => {
 	    
 
 
-
+client.on('message', message => {
+    if (message.content.startsWith("!push")) {
+    var embedWarn = new Discord.RichEmbed()
+    .setTitle("Testing warn")
+    .addField("Hi")
+    message.channel.sendEmbed(embedWarn)
+    }
+});
 
 
 
