@@ -66,7 +66,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("!push2")) {
+    if (message.content.startsWith("!push")) {
     var embedWarn = new Discord.RichEmbed()
     .setTitle("► The punishments due")
   .setColor('F0EFEF')
