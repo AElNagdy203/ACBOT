@@ -72,7 +72,7 @@ client.on('message', message => {
   .addField("• Warn 1", " ")
   .addField("• Warn 2", " ")
   .addField("• Warn 3", " ")
-  .addField("• Warn 6 = Ban permanently", " "
+  .addField("• Warn 6 = Ban permanently", " ")
     message.channel.sendEmbed(embedWarn)
     }
 });
