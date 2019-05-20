@@ -53,7 +53,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 
-    if (message.content === 'push') {
+    if (message.content === '!push') {
 
        message.channel.send('**► The punishments due**')
 			.then(() => message.channel.send('• Warn 1'))
