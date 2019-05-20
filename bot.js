@@ -70,10 +70,15 @@ client.on('message', message => {
     var embedWarn = new Discord.RichEmbed()
     .setTitle("► The punishments due")
     .addField("• Warn 1")
+    .value("a")
     .addField("• Warn 2")
+    .value("a")
     .addField("• Warn 3")
+    .value("a")
     .addField("• Warn 4 = Suspended")
+    .value("a")
     .addField("• Warn 6 = Ban permanently")
+    .value("a")
     message.channel.sendEmbed(embedWarn)
     }
 });
