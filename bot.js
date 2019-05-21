@@ -96,4 +96,18 @@ client.on('message', message => {
 
 
 
+client.on("message", (message) => {
+    if (message.content.startsWith("!kick")) {
+        var member= message.mentions.members.first();
+        member.kick().then((member) => {
+            message.channel.send(":wave: " + member.displayName + ":white_check_mark: **تم طرد هذاالكائن مجاناً**");
+        }).catch(() => {
+            message.channel.send(":x: __**.تم رفض الطلب**__");
+        });
+    }
+});
+
+
+
+
 client.login(process.env.BOT_TOKEN);
