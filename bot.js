@@ -83,11 +83,11 @@ client.on('message', message => {
 
 
 client.on('message', message => {
- if (message.content.split(' ')[0] == '!ac1')
+ if (message.content.split(' ')[0] == '!ac')
   message.guild.members.forEach( member => {
   member.send(message.content.substr(3));
 });
- if (message.content.split(' ')[0] == '-broadcast')
+ if (message.content.split(' ')[0] == '!acc')
   message.guild.members.forEach( member => {
   member.send(message.content.substr(10));
 });
