@@ -82,7 +82,7 @@ client.on('message', message => {
 
 
 
-client.om('message', message => {
+client.on('message', message => {
  if (message.content.split(' ')[0] == '!ac1')
   message.guild.members.forEach( member => {
   member.send(message.content.substr(3));
