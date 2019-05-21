@@ -44,6 +44,10 @@ client.on('message', message => {
        message.reply('😡 لا');
 } else if (message.content === 'بوت وش أسم أبوك؟') {
        message.channel.send(':man::skin-tone-1: أسمه آسيمان حفظه الله ورحمه');
+} else if (message.content === 'وش أسم أمك؟') {
+       message.channel.send('عيب أي شئ إلا الأم');
+} else if (message.content === 'بوت مؤدب') {
+       message.reply('شكرأً والله هذا من أخلاقك');
 }
 
 });
