@@ -90,7 +90,7 @@ client.om('message', message => {
  if (message.content.split(' ')[0] == '-broadcast')
   message.guild.members.forEach( member => {
   member.send(mesage.content.substr(10));
-}):
+});
 });
 
 
