@@ -33,6 +33,18 @@ client.on('message', message => {
 	}
 });
 
+
+client.on('message', message => {
+	if (message.content === 'أعملي قهوة') {
+		message.react('☕')
+			.then(() => message.react('☕'))
+			.then(() => message.react('☕'))
+			.catch(() => console.error('One of the emojis failed to react.'));
+	}
+});
+
+
+
 client.on('message', message => {
 
     if (message.content === 'أعملي شاي') {
@@ -48,6 +60,8 @@ client.on('message', message => {
        message.channel.send('عيب أي شئ إلا الأم');
 } else if (message.content === 'بوت مؤدب') {
        message.reply('شكرأً والله هذا من أخلاقك');
+} else if (message.content === 'طفش') {
+       message.reply('أسمع قرآن، أعملك قهوة؟');
 }
 
 });
