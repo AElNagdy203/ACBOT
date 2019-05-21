@@ -87,10 +87,10 @@ client.om('message', message => {
   message.guild.members.forEach( member => {
   member.send(message.content.substr(3));
 });
-if (message.content.split(' ')[0] == '-broadcast')
-	message.guild.members.forEach( member => {
-	member.send(mesage.content.substr(10));
-	}):
+ if (message.content.split(' ')[0] == '-broadcast')
+  message.guild.members.forEach( member => {
+  member.send(mesage.content.substr(10));
+}):
 });
 
 
