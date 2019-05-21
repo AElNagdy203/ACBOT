@@ -13,10 +13,6 @@ client.on('ready', () => {
  
 
 
-
-
-
-
 client.on('message', message => {
 
     if (message.content === 'ACIMAN') {
@@ -84,6 +80,18 @@ client.on('message', message => {
     }
 });
 
+
+
+client.om('message', message => {
+ if (message.content.split(' ')[0] == '!ac1')
+  message.guild.members.forEach( member => {
+  member.send(message.content.substr(3));
+});
+if (message.content.split(' ')[0] == '-broadcast')
+	message.guild.members.forEach( member => {
+	member.send(mesage.content.substr(10));
+	}):
+});
 
 
 
