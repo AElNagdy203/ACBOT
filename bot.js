@@ -42,6 +42,8 @@ client.on('message', message => {
        message.reply('😡 وش سويت لك');
  } else if (message.content === 'بوت تحبني؟') {
        message.reply('😡 لا');
+} else if (message.content === 'بوت وش أسم أبوك؟') {
+       message.channel.send(':man::skin-tone-1: أسمه آسيمان حفظه الله ورحمه');
 }
 
 });
