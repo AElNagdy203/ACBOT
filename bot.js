@@ -34,14 +34,17 @@ client.on('message', message => {
 });
 
 
+
+
+
 client.on('message', message => {
-	if (message.content === 'أعملي قهوة') {
+	if (message.content === ('أعملي قهوة') {
 		message.react('☕')
-			.then(() => message.react('☕'))
-			.then(() => message.react('☕'))
-			.catch(() => console.error('One of the emojis failed to react.'));
+		.catch(() => console.error('One of the emojis failed to react.'));
 	}
 });
+
+
 
 
 
