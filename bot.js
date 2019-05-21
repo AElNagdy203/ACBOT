@@ -96,13 +96,30 @@ client.on('message', message => {
 
 
 
-client.on("message", (message) => {
     if (message.content.startsWith("!kick")) {
+        // Easy way to get member object though mentions.
         var member= message.mentions.members.first();
-        member.kick.then((member) => {
-            message.channel.send(":wave: " + member.displayName + ":white_check_mark: **تم طرد هذاالكائن مجاناً**");
+        // Kick
+        member.kick().then((member) => {
+            // Successmessage
+            message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
         }).catch(() => {
-            message.channel.send(":x: __**.تم رفض الطلب**__");
+             // Failmessage
+            message.channel.send("Access Denied");
+        });
+    }
+});
+ client.on("message", (message) => {
+    if (message.content.startsWith("!ban")) {
+        // Easy way to get member object though mentions.
+        var member= message.mentions.members.first();
+        // ban
+        member.ban().then((member) => {
+            // Successmessage
+            message.channel.send(":wave: " + member.displayName + " has been successfully banned https://gfycat.com/playfulfittingcaribou :point_right: ");
+        }).catch(() => {
+             // Failmessage
+            message.channel.send("Access Denied");
         });
     }
 });
