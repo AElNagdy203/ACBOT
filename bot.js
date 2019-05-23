@@ -67,7 +67,7 @@ client.on('message', message => {
        message.reply('أسمع قرآن، أعملك قهوة؟');
 } else if (message.content === 'بتحب سيف؟') {
        message.reply('أيوه يسطا بحبه كثير ياعم :heart:');
-
+}
 });
 
 
