@@ -65,24 +65,26 @@ client.on('message', message => {
        message.reply('شكرأً والله هذا من أخلاقك');
 } else if (message.content === 'طفش') {
        message.reply('أسمع قرآن، أعملك قهوة؟');
-}
+} else if (message.content === 'بتحب سيف؟') {
+       message.reply('أيوه يسطا بحبه كثير ياعم :heart:');
 
 });
 
 
 client.on('message', message => {
 
-    if (message.content === 'kkaadddassdwwmmmee') {
+    if (message.content === 'سيف سيف') {
 
        message.channel.send('**► The punishments due**')
-			.then(() => message.channel.send('• Warn 1'))
-			.then(() => message.channel.send('• Warn 2'))
-			.then(() => message.channel.send('• Warn 3'))
-			.then(() => message.channel.send('• Warn 4 = Suspended'))
-			.then(() => message.channel.send('• Warn 6 = Ban permanently'))
+			.then(() => message.channel.send('• ايوه هو سيف'))
+			.then(() => message.channel.send('• بحب سيف'))
+			.then(() => message.channel.send('• سيف سيف سيف'))
+			.then(() => message.channel.send('• سيف'))
+			.then(() => message.channel.send('• سيف'))
 			.catch(() => console.error('One of the massages failed to reply.'));
 	}
 });
+
 
 	    
 	    
