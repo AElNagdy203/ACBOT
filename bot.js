@@ -68,6 +68,11 @@ client.on('message', message => {
 } else if (message.content === 'بتحب سيف؟') {
        message.reply('أيوه يسطا بحبه كثير ياعم :heart:');
 }
+	
+} else if (message.content === 'تدري شئ عن عيلة Q3') {
+       message.reply('أأفضل عائلة بالدنيا :heart:');
+}
+	
 });
 
 
