@@ -112,6 +112,22 @@ client.on('message', message => {
 
 
 
+
+client.on('message', message => {
+    if (message.content.startsWith("!say1")) {
+    var embedWarn = new Discord.RichEmbed()
+    .setTitle("")
+  .setColor('F0EFEF')
+  .addField("قم بالضغط هنا حتى تثبت أنك موجود.")
+  .addField("وحدد إذا ستُكمل مسيرتك معنا، أم تريد تقديم طلب إستقالة.")
+    message.channel.sendEmbed(embedWarn)
+    }
+});
+
+
+
+
+
 client.on('message', message => {
  if (message.content.split(' ')[0] == '!ac')
   message.guild.members.forEach( member => {
@@ -128,7 +144,7 @@ client.on('message', message => {
 client.on('message', message => {
 
 if (message.content.startsWith("!say")) {
-message.channel.sendMessage((message.author.username) + " says: " + (message.content.replace('!say ','')));
+message.channel.sendMessage((message.content.replace('!say ','')));
 };
 });
 
