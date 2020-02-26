@@ -128,10 +128,25 @@ client.on('message', message => {
 
 client.on('message', message => {
 
-if (message.content.startsWith("!4ay")) {
-message.channel.sendMessage((message.content.replace('4ay ','')));
+if (message.content.startsWith("!sa")) {
+message.channel.sendMessage((message.content.replace('!sa ','')));
 };
 });
+
+
+
+const msg = message.content; 
+const announceChannel = bot.channels.get("682278195562807324");
+
+if(cmd === `${prefix}announce`){
+    let announceEmbed = new Discord.RichEmbed()
+    .setTitle(":flag_jp: **Announcement** :flag_jp:")
+    .setDescription(msg)
+    .setColor("#ff0000");
+
+    return announceChannel.send(announceEmbed);
+}
+
 
 
 client.login(process.env.BOT_TOKEN);
