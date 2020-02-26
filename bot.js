@@ -127,8 +127,8 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-if (message.content.startsWith("!message")) {
-message.channel.sendMessage((message.content.replace('!message ','')));
+if (message.content.startsWith("!staffm")) {
+message.channel.sendMessage((message.content.replace('','')));
 };
 });
 
