@@ -129,7 +129,7 @@ client.on('message', message => {
 client.on('message', message => {
 
 if (message.content.startsWith("%say")) {
-message.channel.sendMessage( (message.content.replace('%say ')));
+message.channel.sendMessage( (message.content.replace(' ', '')));
 };
 });
 
