@@ -126,44 +126,118 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
+const ttb_channel = "682298752349765686"
 
-if (message.content.startsWith("!sa")) {
-message.channel.sendMessage((message.content.replace('!sa ','                                 
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     
-						     ')));
-};
+//replace 'ID OF main-chat server' with the server ID of main-chat
+const ttb_guild = "682298752349765686"
+
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+//our message cache that points to messages sent in talk-thru-bot to messages that will be sent in main-chat, for things like editing and deletion to work
+let messageCache = new Discord.Collection();
+
+//our ready event, will log 'bottag is ready!' when bot is online
+client.on("ready", () => {
+  console.log(`${client.user.tag} is ready!`)
 });
+
+//our message event
+client.on("message", async message => {
+
+//if the channel isn't talk-thru-bot, don't do anything
+  if(message.channel.id !== ttb_channel) return;
+
+//fetching channel  
+let channel = client.guilds.get(ttb_guild).channels.find(c => c.name === message.channel.name)
+
+//throw an error if the channel you named the 'talk-thru-bot' does not exist
+  if(!channel) throw new Error(`Channel ${message.channel.name} not found`)
+
+//if message starts with '!!', don't send it to the 'main-chat' channel
+  if(message.content.startsWith("!!")) return;
+  
+//if message contains attachments, it will send them
+  let attachments = message.attachments.map(a => a.url);
+  
+//send the message to 'main-chat' channel, if TTS is enabled on that message, it will send as TTS to 'main-chat' channel aswell, if there is attachments, it will attach those attachments too.
+  channel.send(message.content, { tts: message.tts, files: attachments }).then(msg => {
+
+//add the message IDs to the message cache
+  messageCache.set(message.id, msg.id); 
+
+  });
+  
+});
+
+//our message delete event
+//i'll skip over the same stuff we added in the message event
+
+client.on("messageDelete", async message => {
+  if(message.channel.id !== ttb_channel) return;
+  let channel = client.guilds.get(ttb_guild).channels.find(c => c.name === message.channel.name)
+  if(!channel) throw new Error(`Channel ${message.channel.name} not found`)
+
+//getting the deleted messages ID, to delete the one in 'main-chat' aswell
+  let msgId = messageCache.get(message.id)
+
+//if message isn't in cache, ignore it
+  if(!msgId) return;
+  
+//fetches the message in 'main-chat'
+  channel.fetchMessage(msgId).then(msg => {
+
+//deletes the message in 'main-chat'
+    msg.delete();
+
+  })
+//logs error if there was a problem
+  .catch(err => console.log(err));
+  
+//deletes the message IDs from the message cache, since their not needed anymore
+  messageCache.delete(message.id);
+  
+});
+
+//our message edit event
+
+client.on("messageUpdate", async (oldMessage, newMessage) => {
+  if(newMessage.channel.id !== tb_channel) return;
+  let channel = client.guilds.get(ttb_guild).channels.find(c => c.name === newMessage.channel.name)
+  if(!channel) throw new Error(`Channel ${newMessage.channel.name} not found`)
+
+  let msgId = messageCache.get(newMessage.id)
+  if(!msgId) return;
+  
+  channel.fetchMessage(msgId).then(msg => {
+
+//edits the message in 'main-chat'
+   msg.edit(newMessage.content);
+  })
+  .catch(err => console.log(err))
+  
+});
+
+//our reaction add event
+
+client.on("messageReactionAdd", async (reaction, user) => {
+  if(reaction.message.channel.id !== ttb_channel) return;
+  let channel = client.guilds.get(ttb_guild).channels.find(c => c.name === reaction.message.channel.name)
+  if(!channel) throw new Error(`Channel ${reaction.message.channel.name} not found`)
+
+  let msgId = messageCache.get(reaction.message.id)
+  if(!msgId) return;
+  
+  channel.fetchMessage(msgId).then(msg => {
+
+//reacts to the message in 'main-chat'
+   msg.react(reaction.emoji.name);
+
+  })
+  .catch(err => console.log(err));
+  
+});					     
+
 
 
 
