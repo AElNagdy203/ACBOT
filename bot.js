@@ -128,8 +128,8 @@ client.on('message', message => {
 
 client.on('message', message => {
 
-if (message.content.startsWith("!say")) {
-message.channel.sendMessage( (message.content.replace('!say ','')));
+if (message.content.startsWith("!staffm")) {
+message.channel.sendMessage( (message.content.replace('!staffm ','')));
 };
 });
 
