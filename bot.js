@@ -25,7 +25,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	if (message.content === 'أعملي شاي') {
+	if (message.content === 'اعملي شاي') {
 		message.react('☕')
 			.then(() => message.react('☕'))
 			.then(() => message.react('☕'))
@@ -38,7 +38,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	if (message.content === 'أعملي قهوة') {
+	if (message.content === 'قهوة') {
 		message.react('☕')
 		.catch(() => console.error('One of the emojis failed to react.'));
 	}
@@ -50,7 +50,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 
-    if (message.content === 'أعملي شاي') {
+    if (message.content === 'شاي') {
 
        message.reply('تفضل يا عومري :heart:');
   } else if (message.content === 'بوت غبي') {
@@ -127,9 +127,8 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	
 if (message.content.startsWith("!say")) {
-message.channel.sendMessage((message.author.username) + " says: " + (message.content.replace('!say ','')));
+message.channel.sendMessage((message.content.replace('!say ','')));
 };
 });
 
