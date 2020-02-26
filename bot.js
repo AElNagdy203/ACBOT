@@ -129,7 +129,7 @@ client.on('message', message => {
 client.on('message', message => {
 
 if (message.content.startsWith("!sa")) {
-message.channel.sendMessage((message.content.replace('!sa ',''));
+message.channel.sendMessage((message.content.replace('!sa ','')));
 };
 });
 
