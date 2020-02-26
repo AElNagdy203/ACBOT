@@ -105,7 +105,7 @@ client.on('message', message => {
   .addField("• يُمنع بأي شكل من الأشكال أعطاء دعوة لأي شخص من الاشخاص", "ـــــــــــــــــــــــــــــــــــــــ")
   .addField("• يُمنع منعاً بتاً نشر اي صور او أي محتوي إباحي", "ـــــــــــــــــــــــــــــــــــــــ")
   .addField("• يُمنع نشر أي روابط خاصة بسيرفرات خوادم أُخري" , "ـــــــــــــــــــــــــــــــــــــــ")
-  .addField("• Warn 6 = Ban permanently", "► ACBOT was developed by ACIMAN#1411")
+  .addField("هذه القوانين قابلة للتعديل في أي وقت", "► Bot was developed by ACIMAN#1411")
     message.channel.sendEmbed(embedWarn)
     }
 });
