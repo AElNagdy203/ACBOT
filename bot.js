@@ -127,15 +127,12 @@ client.on('message', message => {
 
 
 
-module.exports.run = async (bot, message, args) => {
-
-if (fromID === me && text.includes("~say") ) {
-bot.sendMessage({ to: channel, message: txt.replace('~say ','') });
-}
-
-module.exports.help = {
-name: "say"
-}
+case "say":
+message.delete()
+if (message.content.startsWith("!say")) {
+message.channel.sendMessage((message.author.username) + " says: " + (message.content.replace('!say ','')));
+};
+break;
 
 
 
