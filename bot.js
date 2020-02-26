@@ -125,6 +125,12 @@ client.on('message', message => {
 
 
 
+            case 'say':
+                let saymsg = message.content
+                message.channel.send(saymsg.replace("c!say",""))
+                message.delete(1)
+            break;
+
 
 
 
