@@ -125,8 +125,12 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {
 
-
+if (message.content.startsWith("!say")) {
+message.channel.sendMessage((message.author.username) + " says: " + (message.content.replace('!say ','')));
+};
+});
 
 
 
