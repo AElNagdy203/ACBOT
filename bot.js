@@ -116,10 +116,10 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content.startsWith("!say1")) {
     var embedWarn = new Discord.RichEmbed()
-    .setTitle("")
-  .setColor('F0EFEF')
-  .addField("قم بالضغط هنا حتى تثبت أنك موجود.")
-  .addField("وحدد إذا ستُكمل مسيرتك معنا، أم تريد تقديم طلب إستقالة.")
+    .setTitle("awwwww")
+    .setColor('F0EFEF')
+    .setDescription("aaaaada")
+    .setFooter("adadadaddazz")
     message.channel.sendEmbed(embedWarn)
     }
 });
