@@ -114,12 +114,13 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("!say1")) {
+    if (message.content.startsWith("!embed1")) {
     var embedWarn = new Discord.RichEmbed()
-    .setTitle("awwwww")
+    .setTitle("STAFF")
     .setColor('F0EFEF')
-    .setDescription("aaaaada")
-    .setFooter("adadadaddazz")
+    .setDescription("قم بالضغط هنا حتى تثبت وجودك معنا.")
+    .setDescription("قم بالضغط هنا حتى تثبت وجودك معنا.")
+    .setFooter("ACBOT")
     message.channel.sendEmbed(embedWarn)
     }
 });
