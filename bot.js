@@ -114,12 +114,12 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("!embed1")) {
+    if (message.content.startsWith("$embed1")) {
     var embedWarn = new Discord.RichEmbed()
     .setTitle("NOTICE")
     .setColor('F0EFEF')
     .setDescription("قم بالضغط هنا حتى تثبت وجودك معنا. \n وعليك تحديد موقفك إذا ستُكمل مسيرتك معنا، أم ستقدم طلب إستقالة.")
-    .setFooter("ACBOT")
+    .setFooter("ACBOT#7103")
     message.channel.sendEmbed(embedWarn)
     }
 });
