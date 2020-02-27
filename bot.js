@@ -118,7 +118,7 @@ client.on('message', message => {
     var embedWarn = new Discord.RichEmbed()
     .setTitle("NOTICE")
     .setColor('F0EFEF')
-    .setDescription("قم بالضغط هنا حتى تثبت وجودك معنا. \n وعليك تحديد موقفك إذا ستُكمل مسيرتك معنا، أم ستقدم طلب إستقالة.")
+    .setDescription("قم بالضغط هنا حتى تثبت وجودك معنا. \n وعليك تحديد موقفك إذا ستُكمل مسيرتك معنا، أم تريد تقديم طلب إستقالة.")
     .setFooter("ACBOT#7103")
     message.channel.sendEmbed(embedWarn)
     }
