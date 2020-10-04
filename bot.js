@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'ACIMAN') {
+    if (message.content === 'Abdelrahman Elnagdy') {
 	    
        message.reply('من فضلكم الكل يحيه لأنه يتعب عشان يخليني بوت حلو :heart:');
   }
